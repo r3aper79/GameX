@@ -1,0 +1,658 @@
+.extContainer{
+    width:0;
+    height:0;
+    display:flex;
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100000;
+}
+
+.chatIconContainer{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    bottom:0;
+    left:0;
+    transform: translate(30px, -1rem);
+}
+.chatIcon{
+    padding: 5px;
+    background-color:var(--main-bg-color);
+    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.iconSendContainer{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 8px;
+}
+.iconSendContainer > *{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.innerContainerRightSide {
+    padding-left: 10px;
+    width:16rem;
+    height:60vh;
+    background-color:var(--main-bg-color);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    right:0;bottom:0;
+    /* border-top-left-radius: 5px; */
+    transition: .7s;
+    z-index: 25;
+}
+
+.containerLeftSide {
+    height:50vh;
+    width:18rem;
+    display:flex;
+    flex-direction:column;
+    background-color:var(--main-bg-color);
+    justify-content:space-between;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    border-top-right-radius: 5px;
+    /* border: 0.1rem solid white; */
+    transform: translate(20rem, 0);
+    transition: .7s;
+    z-index: 24;
+    /* background-color: rgba(0, 0, 0, .51); */
+    /* display:none */
+}
+
+.titleContainer{
+    width:100%;
+    height:10%;
+    display:flex;
+    align-items:center;
+}
+
+.chatTitle{
+    display:flex;
+    width:80%;
+    height:100%;
+    justify-content:center;
+    align-items:center;
+    border-bottom:2px solid rgba(255,255,255,0.2)
+}
+
+.iconoAddFriends{
+    width: 15%;
+    height: 100%;
+    transform: rotateY(180deg);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+.infoUserContainer{
+    width:100%;
+    height:15%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.containerRight{
+    width:100%;
+    height:100%;
+}
+.friendCardsContainer::-webkit-scrollbar{
+    width: 8px;
+    height: 0px;
+}
+.chatsContainer::-webkit-scrollbar {
+    width: 4px;
+    height: 0;
+}
+.friendCardsContainer::-webkit-scrollbar-track, .chatsContainer::-webkit-scrollbar-track {
+    background-color:rgba(255, 255, 255, 0.3);
+}
+.friendCardsContainer::-webkit-scrollbar-thumb, .chatsContainer::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    border-radius: 5px;
+}
+
+
+.friendUserImage {
+    width:2.5rem;
+    height:2.5rem;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    border-radius:3rem;
+    margin-left:5%;
+    cursor: pointer;
+
+}
+
+.friendContainer {
+    width:100%;
+    height:15%;
+    border:1px solid rgba(0,0,0,0.2);
+    margin:5% 0;
+    display:flex;
+    align-items:center;
+    border-radius:5px;
+    /* position: relative; */
+}
+.beAFriendContainer {
+    width:100%;
+    height:15%;
+    border:1px solid rgba(0,0,0,0.2);
+    margin:5% 0;
+    display:flex;
+    align-items:center;
+    border-radius:5px;
+    position: relative;
+}
+
+.chatsContainer {
+    width:95%;
+    height: 68.5%;
+    margin:2.5% 2.5% 0 2.5%;
+    /* border:1px solid black; */
+    border-radius:5px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.friendCardsContainer{
+    width: 100%;
+    height: calc(90% - 1rem);
+    padding-top: 1rem;
+    overflow: scroll;
+    /* padding-left: 8px; */
+}
+
+.userName {
+    display:flex;
+    margin-left:2.5%;
+    text-align: center;
+    overflow: hidden;
+    height:100%;
+    font-size: 15px;
+    align-items:center;
+    width:calc(99% - 7.5rem);
+    max-width: calc(99% - 7.5rem);
+    cursor: pointer;
+}
+.userNameChat{
+    text-align: center;
+    margin-right:5%;
+    display:flex;
+    
+}
+
+.addFriend{
+    width: 2rem;
+    height: 100%;
+    /* background-color: blueviolet; */
+    margin-left: auto;
+    position: relative;
+}
+.deleteFriend{
+    width: 2rem;
+    /* height: 100%; */
+    /* background-color: blueviolet; */
+    margin-left: auto;
+    position: relative;
+}
+
+.deleteFriend:hover::before{
+    transition: .7s;
+    cursor: pointer;
+    content: "Delete Friend";
+    opacity: 1;
+    min-width: 100px;
+    font-size: 12px;
+    text-align: center;
+    color:rgba(250, 250, 250, 0.9) ;
+    background-color: rgba(109, 109, 109, 0.55);
+    /* height: 10%; */
+    position: absolute;
+    top: -25px;
+    right: 0;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px 1px red; */
+    border: 1px solid rgb(199, 199, 199);
+}
+.beAFriendContainer:hover::before{
+    transition: .7s;
+    cursor: pointer;
+    content: "Add Friend";
+    opacity: 1;
+    min-width: 100px;
+    font-size: 12px;
+    text-align: center;
+    color:black ;
+    background-color: rgba(135, 225, 148, 0.7);
+    /* height: 10%; */
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px 1px red; */
+    border: 1px solid rgb(199, 199, 199);
+}
+.deleteFriend::before{
+    transition: .7s;
+    content: "Delete Friend";
+    min-width: 100px;
+    font-size: 14px;
+    text-align: center;
+    color:rgba(250, 250, 250, 0.9) ;
+    background-color: rgba(109, 109, 109, 0.55);
+    /* height: 10%; */
+    position: absolute;
+    top: -25px;
+    right: 0;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px 1px red; */
+    border: 1px solid rgb(211, 210, 210);
+    opacity: 0;
+}
+.beAFriendContainer::before{
+    transition: .7s;
+    content: "Add Friend";
+    min-width: 100px;
+    font-size: 14px;
+    text-align: center;
+    color:black ;
+    background-color: rgba(135, 225, 148, 0.7);
+    /* height: 10%; */
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px 1px red; */
+    border: 1px solid rgb(211, 210, 210);
+    opacity: 0;
+}
+
+.messageContainer {
+    max-width:90%;
+    min-height:10%;
+    background-color:white;
+    border-radius:10px;
+    /* border-top-left-radius:0px; */
+    display:flex;   
+}
+
+
+
+.containerMessageContainer {
+    /* width:100%; */
+    display:flex;
+    padding: 5px 7px 5px 9px;
+    
+}
+
+.messageText {
+    width:100%;
+    word-break:break-word;
+    display:flex;
+    justify-content:flex-start;
+    padding: 6px 15px 8px 9px;
+}
+
+.iconoClose{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+div.iconoClose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 100%;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.inputStyle:focus  {
+    border:1px inset
+}
+.inputStyle {
+    width:80%;
+    height:2rem;
+    font-size:12px;
+    padding:0 10px;
+    margin-left:5%;
+    border-radius:10px;
+    outline:none;
+    border:1px outset
+
+}
+.inputContainer  {
+    width:100%;
+    height:15%;
+    display:flex;
+    /* // justifyContent:center; */
+    align-items:center
+}
+.sendButton  {
+    width:5rem;
+    height:2.5rem;
+    margin-left:2.5%;
+    border-radius:5px;
+    outline:none;
+    /* // border:none */
+}
+
+.searchBarFriend{
+    position: absolute;
+    left: 0;
+    bottom: 60vh;
+    
+    width: 16rem;
+    /* height: 20vw; */
+    /* background-color: red; */
+}
+.searchBarInput {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    /* border-top-right-radius: 10px; */
+    border-top-right-radius: 10px;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    font-size: 20px;
+    transition:"all 0.7s ease 0.5s";
+    height: 3rem;
+
+}
+
+.parentHardware {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    height: 100vh;
+}
+    
+.divHardware0 {
+    grid-area: 1 / 2 / 1 / 1;
+     overflow: hidden;
+}
+.divHardware1 {
+    grid-area: 2 / 1 / 2 / 1;
+     overflow: hidden;
+}
+.divHardware2 {
+    grid-area: 1 / 2 / 2 / 2;
+     overflow: hidden;
+}
+.divHardware3 {
+    grid-area: 2 / 2 / 2 / 2;
+     overflow: hidden;
+}
+.divHardware4 {
+    grid-area: 2 / 3 / 2 / 3;
+     overflow: hidden;
+}
+.divHardware5 {
+    grid-area: 1 / 3 / 1 / 3;
+     overflow: hidden;
+}
+
+.divHardware0:hover,.divHardware1:hover,.divHardware2:hover,.divHardware3:hover,.divHardware4:hover,.divHardware5:hover{
+    cursor: pointer;
+}
+
+.imageHeroStore{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+     background-position: top left;
+     transition: all 1s;
+}
+.imageHeroStore:hover{
+    transform: scale(1.1);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+
+.imageHeroStoreHardware{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    background-size:cover;
+    background-position: bottom center;
+    transition: all 1s;
+}
+.imageHeroStoreHardware:hover{
+    transform: scale(1.1);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.imgBanerBkHardware{
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+.imgPortadaBkHardware{
+    height: 70vh;
+    width: 25vw;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 5vw;
+    top: 30vh;
+    border-radius: 30px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+}
+.imgPortadaBkGameAditional{
+    overflow: hidden;
+    height: 10rem;
+    width:7rem;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+}
+.imgPortadaBkGameAditional:hover{
+    transition: .7s;
+    overflow: initial;
+}
+.imgPortadaBkGameAditional::before{
+    transition: .7s;
+    content: "Free with this purchase";
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left:0%;
+    width: 130px;
+    border-radius: 5px;
+    height: 10%;
+    background-color: rgba(255, 0, 0, 0.407);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    opacity: 0;
+}
+.imgPortadaBkGameAditional:hover::before{
+    transition: .7s;
+    opacity: 1;
+    content: "Free with this purchase";
+    font-size: 10px;
+    border-radius: 5px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    padding-left: 5px;
+    width: 130px;
+    height: 10%;
+    background-color: rgba(255, 0, 0, 0.767);
+
+
+}
+.cadaDivInfoSecHard{
+    /* border: 1px solid black; */
+    border-radius: 7px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin-bottom: 5vh;
+    width: 40%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+}
+.cadaDivInfoSecHardFeatures{
+    /* border: 1px solid black; */
+    border-radius: 7px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin-bottom: 5vh;
+    width: 90%;
+    min-height: 20vh;
+    display: flex;
+    /* align-items: center; */
+    padding: 5vh 5vw;
+}
+
+.pTituloInfoSecHardFeatures{
+    color: #d6dbeb;
+    font-weight: bold;
+    font-size: 2.5vh;
+    margin-right: 1vw;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 2vw;
+    padding-top: 2.5px;
+}
+.pTituloInfoSecHard{
+    color: #d6dbeb;
+    font-weight: bold;
+    font-size: 2.5vh;
+    margin-right: 1vw;
+    display: flex;
+    align-items: center;
+}
+
+.featuresLi{
+    list-style-type:circle;
+    margin-left: 10px;
+    padding: 5px 0;
+    color: white;
+}
+
+.divInfoSecondCardHardware{
+    min-height: 40vh;
+    margin-top: 2vh;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5vh;
+}
+.descriptionPriceHardware{
+    min-height: 20vh;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15vh;
+}
+
+.divAddCartHardware{
+    width: 55%;
+    padding: 5vh 0 0 .5rem;
+    /* padding-left: 35%; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.divDescriptionHardwareCard{
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 15vh; */
+    /* margin-right: 5%; */
+    min-height: 20vh;
+    /* border: 1px solid black; */
+    padding: 0vh 1vw 1vh 1vw;
+}
+.divDescriptionHardwareCard > p{
+    word-break: break-word;
+}
+.addToCartHardware{
+    padding: 1vh 2vw;
+    background-color: #eee;
+    font-size: 3.67vh;
+    font-weight: 500;
+    margin-left: 2vw;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #8B95A6;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.addToCartHardware:hover{
+    background-color: var(--main-bg-color);
+    color: #0B1321;
+}
+.priceHardware{
+    padding: 1vh 2vw;
+    margin-right: 1vw;
+    font-size: 3.67vh;
+    font-weight: 500;
+    border-radius: 7px;
+    color: white;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.addToWishListOnComponentHard{
+	cursor: pointer;
+	color: black;
+	background-color:var(--main-bg-color);
+	border-radius: 15px;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	margin: 0 2vw 2vw 2vw ;
+	border: 1px solid var(--third-bg-color);
+	z-index: 500;
+	transition: 0.5s;
+}
+.addToWishListOnComponentHard:hover{
+	background-color: #7abfba;
+	transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+    
+}

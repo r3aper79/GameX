@@ -1,0 +1,454 @@
+.containerStore{
+    background-color: #0B252C;
+    padding-top: 8rem;
+    /* height: 100%;
+    width: 100%;
+    background-size:cover;
+    background-repeat: repeat; */
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  width: 100%;
+  height: 100vh;
+  }
+  
+
+.div1 { 
+  grid-area: 1 / 1 / 5 / 4; 
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+}
+.div2 { 
+  grid-area: 5 / 1 / 9 / 2; 
+  background-size: cover;
+  background-position:  center;
+  overflow: hidden;
+}
+.div3 { 
+  grid-area: 5 / 2 / 9 / 3; 
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.div5 { 
+  grid-area: 1 / 4 / 5 / 5; 
+  background-size: cover;
+  background-position:  center;
+  overflow: hidden;
+}
+.div6 { 
+  grid-area: 1 / 5 / 5 / 6; 
+  background-size: cover;
+  background-position:  center;
+  overflow: hidden;
+}
+.div7 { 
+  grid-area: 5 / 3 / 9 / 6; 
+  background-size: cover;
+  background-position:  center;
+  overflow: hidden;
+}
+
+.div1:hover,.div2:hover,.div3:hover,.div4:hover,.div5:hover,.div6:hover, .div7:hover{
+    cursor: pointer;
+}
+.titleGameHero{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.582);
+  text-align: center;
+  width: 100%;
+}
+.imageHeroStore{
+    background-color: #4646462a;
+    background-blend-mode: soft-light;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+     background-position: top center !important;
+     transition: all 0.5s;
+     display: flex;
+     align-items: flex-end;
+}
+.imageHeroStore:hover{
+    background-color: #464646b8;
+    background-blend-mode: soft-light;
+    transform: scale(0.98) !important;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+}
+/* cards products ----------------------------*/
+.abs,
+.cards .card figcaption,
+.cards .card:after,
+.news .card figcaption,
+.news .card:after,
+.news .article figcaption {
+  position: absolute;
+}
+.rel,
+.cards .card,
+.news .card,
+.news .article {
+  position: relative;
+}
+.fix {
+  position: fixed;
+}
+.dfix {
+  display: inline;
+}
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.dn {
+  display: none;
+}
+.df,
+.cards,
+.news {
+  display: flex;
+}
+.dif {
+  display: inline-flex;
+}
+.dg {
+  display: grid;
+}
+.dig {
+  display: inline-grid;
+}
+
+.wrapper {
+  padding: 15px;
+}
+
+ strong {
+  z-index: 2;
+  background: #24282f;
+  padding: 4px 8px;
+}
+.cards,
+.news {
+  flex-flow: row wrap;
+}
+.cards .card,
+.news .card {
+  margin: 10px;
+  width: 15rem;
+  height: 320px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+  cursor: pointer;
+
+}
+.cards .card div,
+.news .card div {
+  width: 15rem;
+  min-height: 100%;
+}
+.cards .cardImageProduct{
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    align-items: flex-end;
+}
+.cards .card figcaption,
+.news .card figcaption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+  transform: translateY(100%);
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0.637);
+  text-align: center;
+
+}
+.cards .card:after,
+.news .card:after {
+  content: '';
+  z-index: 10;
+  width: 200%;
+  height: 100%;
+  top: -90%;
+  left: -20px;
+  opacity: 0.1;
+  transform: rotate(45deg);
+  background: linear-gradient(to top, transparent, #fff 15%, rgba(255,255,255,0.5));
+  transition: 0.3s;
+}
+.cards .card:hover,
+.news .card:hover,
+.cards .card:focus,
+.news .card:focus,
+.cards .card:active,
+.news .card:active {
+  box-shadow: 0 8px 16px 3px rgba(0,0,0,0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+.cards .card:hover figcaption,
+.news .card:hover figcaption,
+.cards .card:focus figcaption,
+.news .card:focus figcaption,
+.cards .card:active figcaption,
+.news .card:active figcaption {
+  transform: none;
+}
+.cards .card:hover:after,
+.news .card:hover:after,
+.cards .card:focus:after,
+.news .card:focus:after,
+.cards .card:active:after,
+.news .card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
+}
+.news .article {
+  overflow: hidden;
+  width: 350px;
+  height: 235px;
+  margin: 20px;
+}
+.news .article img {
+  width: 100%;
+  min-height: 100%;
+  transition: 0.2s;
+}
+.news .article figcaption {
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(51,51,51,0.3);
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 40px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  background: rgba(6,18,53,0.6);
+  opacity: 0;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+.news .article figcaption h3 {
+  color: #3792e3;
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.news .article:hover img,
+.news .article:focus img,
+.news .article:active img {
+  filter: blur(3px);
+  transform: scale(0.97);
+}
+.news .article:hover figcaption,
+.news .article:focus figcaption,
+.news .article:active figcaption {
+  opacity: 1;
+  transform: none;
+}
+.containerCards{
+    display: flex;
+    justify-content: center;
+}
+/* slider--------------------------------------- */
+.containerSlider{
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+}
+.containerSlider a{
+    color: black;
+    text-decoration: none;
+}
+.cardSlider{
+    width: 10rem;
+    height: 14rem;
+    background-color: white;
+    margin: 1rem;
+    transition: all .5s;
+    border-radius: 1rem;
+}
+.cardSlider:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.cardImgSlider{
+    width: 10rem;
+    height: 10rem;
+    background-size: cover;
+    background-position: top center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+/*----------- scroll------------------ */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: var(--secundary-bg-color);
+    border-radius: 10px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    background: #0a2c4f;
+   }
+   ::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 7px 10px 12px var(--main-bg-color);
+   }
+   /* -------containerFilters------------ */
+   .containerFilters{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   .containerFilters div input{
+     width: 30rem;
+     height: 3rem;
+     outline: none;
+     border: none;
+     text-align: center;
+     font-size: 1.5rem;
+     border-radius: 2rem;
+     padding: 1rem;
+     margin: 1.5rem;
+   }
+
+  .gamesNotFounded{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleGamesNotFounded{
+    padding: 5rem 0;
+    text-align: center;
+    font-size: 35px;
+    color: var(--main-bg-color);
+  }
+  
+  .iconGamesNotFounded{
+    text-align: center;
+    font-size: 80px;
+    color: var(--main-bg-color);
+  }
+  
+  p.tagFilter::after {
+    background-color: #0B1321;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid #eee;
+    border-top: 13px solid transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  p.tagFilterClick{
+    background-color: var(--main-bg-color);
+    color: black;
+  }
+  /* card carrusel */
+  figure.image-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 255px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+  }
+  figure.image-block:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  figure.image-block:hover img {
+    transform: scale(1.25);
+  }
+  figure.image-block:hover figcaption {
+    bottom: 0;
+  }
+  figure.image-block h4 {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1;
+  }
+  figure.image-block img {
+    height: 100%;
+    transition: 0.25s;
+  }
+  figure.image-block figcaption {
+    position: absolute;
+    bottom: -35%;
+    max-height: 15rem;
+    min-height: 15rem;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    color: white;
+    line-height: 1;
+    transition: 0.25s;
+  }
+  figure.image-block figcaption h3 {
+    padding-bottom: 2rem !important;
+    text-align: center;
+    margin: 0 0 20px;
+    padding: 0;
+  }
+  figure.image-block figcaption p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  figure.image-block figcaption button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0;
+    padding: 10px 30px;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+  }
+  div.imageCarrusel{
+    background-size: cover;
+    background-position: top center;
+    width: 280px;
+    height: 400px;
+  }

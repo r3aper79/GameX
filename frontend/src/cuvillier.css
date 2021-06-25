@@ -1,0 +1,2143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+  background-color: var(--secundary-bg-color);
+}
+.containPageHome{
+    height: 100vh;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+}
+.containPageHomeDos{
+    height: 100vh;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+}
+.parallaxRigthHome{
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y:auto;
+}
+.parallaxRigthHome::-webkit-scrollbar{
+    display: none;
+}
+.contentMove{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.contentMoveDos{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.titleContentMove{
+    color: var(--main-bg-color);
+    font-size: 6vh;
+    text-align: left;
+    line-height: 1;
+    min-height: 0vw;
+    width: 90%;
+    text-align: center;
+    text-shadow: 0 1px 0 #1a2d4e, 0 2px 0 #1a2d4e, 0 3px 0 #1a2d4e, 0 4px 0 #1a2d4e
+}
+.textContentMove{
+    width: 70%;
+    color: #8B95A6;
+    font-family: questrial,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: calc(16px + (18 - 16) * ((100vw - var(--minViewportSize) * 1px) / (var(--maxViewportSize) - var(--minViewportSize))));
+    font-style: normal;
+    letter-spacing: 0em;
+    line-height: 1.6;
+    min-height: 0vw;
+    margin-top: 4vh;
+}
+.buttonContenMove{
+    background-color: var(--main-bg-color);
+    border-radius: 50px;
+    width: auto;
+    padding: 1vh 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    color: rgb(6, 119, 184);
+    height: 7vh;
+    text-align: center;
+    margin-top: 4vh;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+    transition: 0.5s;
+}
+.buttonContenMove:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid gray;
+    transition: 0.5s;
+}
+.contentVideoMove{
+    background-color: rgba(51, 66, 94, 0.2);
+    height: auto;
+    width: 25vw;
+    margin: 5vh 0;
+    border: 1px solid rgba(128, 128, 128, 0.438);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4vh;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+}
+.videoContent{
+    border: 1px solid rgba(128, 128, 128, 0.438);
+    height: 25vh;
+    width: 80%;
+    margin-bottom: 4vh;
+    background-position: center;
+    background-size: cover;
+}
+.titleVideoMove{
+    font-weight: bolder;
+    color: white;
+    font-size: 3vh;
+    width: 80%;;
+    text-align: left;
+}
+.descriptionVideoMove{
+    width: 80%;
+    color: #8B95A6;
+    font-family: questrial,sans-serif;
+    font-weight: normal;
+    font-size: calc(16px + (18 - 16) * ((100vw - var(--minViewportSize) * 1px) / (var(--maxViewportSize) - var(--minViewportSize))));
+    font-style: normal;
+    letter-spacing: 0em;
+    line-height: 1.6;
+    margin: 2rem 0;
+    min-height: 0vw;
+    text-align: left;
+}
+.titleTwoContentMove{
+    color: var(--main-bg-color);
+    font-size: 3vh;
+    text-align: left;
+    line-height: 1;
+    min-height: 0vw;
+    width: 40%;
+}
+.btnHoverPlay{
+    background-color: transparent;
+    border: 1px solid rgb(212, 209, 209);
+    border-radius: 50px;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vh;
+    color: rgb(212, 209, 209);
+    height: 7vh;
+    text-align: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+    transition: 0.5s;
+}
+.btnHoverPlay:hover{
+    background-color: #A3EEE9;
+    color: var(--secundary-bg-color);
+    transition: 0.5s;
+}
+.shadowHeader{
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+    width: 100%;
+    z-index: 30;
+    background: linear-gradient(to top, #0B1321, transparent);
+}
+.shadowHeaderArriba{
+    position: absolute;
+    bottom: -30vh;
+    height: 30vh;
+    width: 100%;
+    z-index: 40;
+    background: linear-gradient(to bottom, #0B1321, transparent);
+}
+.alignContentMove{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    
+}
+.gifLogo{
+    min-height: 120px;
+    min-width: 120px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.containHeader{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    position: absolute;
+    width: 98vw;
+    padding: 1vh 2vw;
+}
+.logoHeader{
+    display: flex;
+    align-items: center;
+}
+.nameLogoHeader{
+    color: #A3EEE9;
+    cursor: pointer;
+}
+.navHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30vw;
+}
+.linkHeaderNav{
+    color: rgb(212, 209, 209);
+    margin-right: 2vw;
+    font-size: 3vh;
+    cursor: pointer;
+    padding-bottom: 0.5vh;
+    border-bottom: 1px solid transparent;
+    transition: 1s;
+    letter-spacing: 1px;
+}
+.linkHeaderNav:hover{   
+    color: var(--main-bg-color);
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--main-bg-color);
+}
+a{
+    text-decoration: none;
+}
+.containHomeBottom{
+    height: 100vh;
+    background-color: #0B1321;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shadowBottom{
+    position: absolute;
+    bottom: -100vh;
+    height: 15vh;
+    width: 100%;
+    z-index: 40;
+    background: linear-gradient(to top, var(--secundary-bg-color), transparent);
+}
+.imagenHomeBottom{
+    background-color: #22222246;
+    background-blend-mode: soft-light;
+    width: 80%;
+    height: 80%;
+    border: 1px solid white;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 20px;
+}
+.contentImgHomeBottom{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 5vh;
+    background-color: #14141434;
+}
+.textContentMoveBottom{
+    width: 70%;
+    color: #8B95A6;
+    font-family: questrial,sans-serif;
+    font-weight: normal;
+    font-size: calc(16px + (18 - 16) * ((100vw - var(--minViewportSize) * 1px) / (var(--maxViewportSize) - var(--minViewportSize))));
+    font-style: normal;
+    letter-spacing: 0em;
+    line-height: 1.6;
+    min-height: 0vw;
+    margin-top: 4vh;
+    text-align: center;
+}
+.containFooter{
+    background-color: var(--secundary-bg-color);
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hrFooter{
+    color: #8B95A6;
+    width: 80%;
+    height: 1px;
+}
+.containNavFooter{
+    height: 80%;
+    width: 95%;
+    margin-top: 2vh;
+    display: flex;
+}
+.divContainNavFooter{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1vw;
+}
+.nameLogoFooter{
+    color: var(--main-bg-color);
+    cursor: pointer;
+    font-size: 6vh;
+}
+.titleSeccionFooter{
+    color: #8B95A6;
+    font-size: 4.5vh;
+    
+}
+.pContainNavFooter{
+    color: #8B95A6;
+    margin: 1vh 0;
+}
+
+.contentHomeCall{
+    background-color: #0B1321;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divHardHome {
+    width: calc(100% - 2em);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    grid-template-areas: "a a b c" "a a d d";
+    width: 80%;
+  }
+  
+  .tarjetaHomeHard {
+    width: 100%;
+    position: relative;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+  .tarjetaHomeHard:last-child {
+    margin-bottom: 0;
+  }
+  .tarjetaHomeHard:before {
+    height: 0;
+    content: "";
+    display: block;
+    padding-bottom: 47.36%;
+  }
+  .tarjetaHomeHard.content:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+  }
+  .tarjetaHomeHard:nth-child(1) {
+    grid-area: a;
+  }
+  .tarjetaHomeHard:nth-child(2) {
+    grid-area: b;
+  }
+  .tarjetaHomeHard:nth-child(3) {
+    grid-area: c;
+  }
+  .tarjetaHomeHard:nth-child(4) {
+    grid-area: d;
+  }
+  .tarjetaHomeHard-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .tarjetaHomeHard-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .tarjetaHomeHard-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .tarjetaHomeHard-label {
+    position: absolute;
+    top: 0.45rem;
+    left: 0.45rem;
+    background: var(--secondary-bg-color);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.7em;
+    color: white;
+    padding: 0.5em;
+  }
+  .tarjetaHomeHard-title {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    color: #d6dbeb;
+    z-index: 5;
+    font-size: 0.8em;
+  }
+  .tarjetaHomeHard.form {
+    position: relative;
+  }
+  .tarjetaHomeHard.form:before {
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  }
+  .tarjetaHomeHard.form:after {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+    content: "";
+    background: #252833;
+  }
+  .tarjetaHomeHard.form .form-title {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 7vw;
+    font-weight: 900;
+    z-index: 5;
+    text-transform: uppercase;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .tarjetaHomeHard.form .form-title:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    content: "Sign Up";
+    opacity: 0.5;
+    filter: blur(10px);
+    transition: all 0.25s ease;
+    z-index: 2;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .tarjetaHomeHard:nth-child(2) .tarjetaHomeHard-label {
+    background: #ef4e7b;
+  }
+  .tarjetaHomeHard:nth-child(3) .tarjetaHomeHard-label {
+    background: var(--secondary-bg-color);
+  }
+  .tarjetaHomeHard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+  }
+  .tarjetaHomeHard:hover .form-title:before {
+    filter: blur(3px);
+    opacity: 0.7;
+  }
+.containGameComp{
+    min-height: 100vh;
+    background-color: #0B1321;
+    display: flex;
+    justify-content: center;
+    
+}
+.containBoxGame{
+    width: 80%;
+    min-height: 40vh;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+}
+.imgBanerBkGame{
+    background-color: #46464643;
+    background-blend-mode: soft-light;
+    height: 60vh;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+}
+.imgPortadaBkGame{
+    background-color: #46464643;
+    background-blend-mode: soft-light;
+    height: 65vh;
+    width: 20vw;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 5vw;
+    top: 30vh;
+    border-radius: 30px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+}
+.infoFastGame{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding-left: 40%;
+    margin-top: 10vh;    
+}
+.titleAndYear{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.titleGameCard{
+    color: white;
+    font-size: 6vh;
+    margin-right: 1vw;
+    max-width: 80%;
+}
+.yearGameCard{
+    color: white;
+    font-size: 4vh;
+}
+.divTagsGame{
+    display: flex;
+    flex-direction: row;
+    width: 60%;    
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 7vh;
+}
+.tagTitleGame{
+    margin-right: 1vw;
+    background-color: var(--secundary-bg-color);
+    color: grey;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+.tag {
+    background: #eee;
+    min-width: auto;
+    text-transform: uppercase;
+    border-radius: 3px 0 0 3px;
+    color: black;
+    display: inline-block;
+    height: 38px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 0 10px  0;
+    font-size: 0.6vw;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    -webkit-transition: color 0.2s;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .tag::before {
+    background: #0B1321;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    content: '';
+    height: 6px;
+    left: 10px;
+    position: absolute;
+    width: 6px;
+    top: 15px;
+    transition: 0.5s;
+  }
+  
+  .tag::after {
+    background: #0B1321;
+    border-bottom: 19px solid transparent;
+    border-left: 13px solid #eee;
+    border-top: 19px solid transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -1;
+    transition: 0.5s;
+  }
+  
+  .tag:hover {
+    background-color: var(--main-bg-color);
+    color: black;
+  }
+  
+  .tag:hover::after {
+     border-left-color: var(--main-bg-color); 
+  }
+.descriptionPrice{
+    height: auto;
+    min-height: 22rem;
+    width: 90%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+}
+.divAddCart{
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    padding-left: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.priceGame{
+    padding: 1vh 2vw;
+    margin-right: 1rem;
+    font-size: 4vh;
+    font-weight: 500;
+    color: white;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.addToCartGame{
+    padding: 1vh 2vw;
+    background-color: #eee;
+    font-size: 4vh;
+    font-weight: 500;
+    margin-left: 2vw;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #8B95A6;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.addToCartGame:hover{
+    background-color: var(--main-bg-color);
+    color: #0B1321;
+}
+.divDescriptionGameCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    padding: 3rem 0.2rem;
+}
+.pDescriptionTitle{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+.pDescriptionContent{
+    color: #8B95A6;
+}
+.divInfoSecondCardGame{
+    min-height: 40vh;
+    margin-top: 2vh;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5vh;
+}
+.cadaDivInfoSec{
+    border: 1px solid black;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin-bottom: 5vh;
+    width: 40%;
+    height: 12vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 0;
+    padding-left: 1vw;
+}
+.pTituloInfoSec{
+    color: #d6dbeb;
+    font-weight: bold;
+    font-size: 2.5vh;
+    margin-right: 1vw;
+    display: flex;
+    align-items: center;
+}
+.tagPlataform {
+    background: rgb(122, 122, 122);
+    border-radius: 3px 0 0 3px;
+    color: black;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 2px 10px;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .tagPlataform::before {
+    background: #0B1321;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    content: '';
+    height: 6px;
+    left: 10px;
+    position: absolute;
+    width: 6px;
+    top: 10px;
+    transition: 0.5s;
+  }
+  
+  .tagPlataform::after {
+    background: #0B1321;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid rgb(122, 122, 122);
+    border-top: 13px solid transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+  }
+  
+  .tagPlataform:hover {
+    background-color: var(--main-bg-color);
+    color: black;
+  }
+  
+  .tagPlataform:hover::after {
+     border-left-color: var(--main-bg-color); 
+  }
+
+.containHeader{
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+}
+  
+.modalCartContain{
+    position: absolute;
+    background-color: #0b1321cc;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+}
+.modalCart{
+    width: 80%;
+    height: 80%;
+    background-color: #13233d;
+    display: flex;
+    border-radius: 30px;
+    margin-top: 8rem;
+}
+.divDisplayProducts{
+    height: 100%;
+    width: 83%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.logoCart{
+    height: 100%;
+    width: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonsCart{
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.divProducts{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 1vw;
+    overflow-y:scroll;
+}
+.cadaDivProduct{
+    min-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    padding-left: 3%;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.39); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
+    border-radius: 30px;
+    margin-bottom: 3vh;
+    background-color: #eee;
+}
+.divImgPortadaProductCart{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.imgPortadaProductCart{
+    height: 95%;
+    width: 100%;
+    background-position: top center;
+    background-size: cover;
+    margin-right: 1vw;
+}
+.divInfoProductCart{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.divPriceAmountCart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.closeModalCart{
+    font-weight: bold;
+    position: relative;
+    top: 2vh;
+    right: 2vw;
+    cursor: pointer;
+    font-size: 4vh;
+    color: red;
+}
+.divInfoProductCart p{
+    font-size: 3.5vh;
+    font-weight: bold;
+}
+.priceCart{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1vw;
+}
+.amountCart{
+    display: flex;
+    height: 100%;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1vw;
+}
+.divTotalCartProduct{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1vw;
+}
+.gifLogoCart{
+    height: 40%;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.buttonSumCart{
+    border: 1px solid black;
+    padding: 0 1vh;
+    border-radius: 5px;
+    background-color: #1DD05D;
+    border: 1px solid #1DD05D;
+    cursor: pointer;
+}
+.buttonSumCartBloq{
+  border: 1px solid black;
+  padding: 0 1vh;
+  border-radius: 5px;
+  background-color: #1DD05D;
+  border: 1px solid #1DD05D;
+  cursor:no-drop;
+}
+.addToWishListOnComponentBloq{
+	cursor:no-drop;
+	color: black;
+	background-color:var(--main-bg-color);
+	border-radius: 15px;
+	width: 60px;
+	height: 60px;
+	padding: 5px;
+	margin: 1rem;
+	border: 1px solid var(--third-bg-color);
+	z-index: 500;
+	transition: 0.5s;
+}
+.buttonRestCart{
+    border: 1px solid black;
+    padding: 0 1vh;
+    border-radius: 5px;
+    background-color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
+.deleteProductCard{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deleteProductCard p{
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 1vh;
+    background-color: #5073b8;
+}
+.buttonCloseModalCancel{
+    color: white;
+    background-color: #1098ad;
+    padding: 1vh 3vh;
+    border-radius: 10px;
+    font-size: 3vh;
+    -webkit-box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.39); 
+    box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.39);
+    cursor: pointer;
+}
+.buttonCloseModalBuy{
+    color: white;
+    background-color: #1DD05D;
+    padding: 1vh 3vh;
+    border-radius: 10px;
+    font-size: 3vh;
+    -webkit-box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.39); 
+    box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.39);
+    cursor: pointer;
+}
+.buttonRestCartBloq{
+    border: 1px solid black;
+    padding: 0 1vh;
+    border-radius: 5px;
+    background-color: red;
+    border: 1px solid red;
+    cursor:no-drop;
+}
+.iconHeaderCart{
+    font-size: 3.5vh;
+}
+.pRecicladoTextInfo{
+    color: #8B95A6;
+    padding: 2px 0;
+    margin-right: 1vw;
+}
+.divSinArtCart{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.botonStoreCart{
+    color: white;
+    background-color: #1DD05D;
+    padding: 1vh 3vh;
+    border-radius: 10px;
+    font-size: 3vh;
+    -webkit-box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.39); 
+    box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.39);
+    cursor: pointer;
+    margin-top: 4vh;
+}
+.totalPriceCart{
+    display: flex;
+    background-color: #A3EEE9;
+    border-radius: 5px;
+    padding: 0.5vh 0;
+    padding-left: 1vw;
+}
+.totalPriceCart p{
+    font-weight: bold;
+    margin-right: 1vw;
+    font-size: 3.5vh;
+}
+.priceGameConDiscount{
+    padding: 1vh 2vw;
+    font-size: 4vh;
+    font-weight: 500;
+    margin-right: 1rem;
+    color: white;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.borderPriceDiscount{
+    position: relative;
+}
+.priceGameSinDiscount{
+    background-color: #061320;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    position: absolute;
+    top: -3vh;
+    right: 7rem;
+    color: red;
+    text-decoration: line-through;
+    transform: rotate(-25deg);
+    font-size: 3.5vh;
+    z-index: 1000;
+}
+
+.contentRibbon {
+    width: 200px; height: 300px;
+    position: relative;
+    border: 1px solid #BBB;
+    background: #EEE;
+  }
+  .ribbon {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+  }
+  .ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#F70505 0%, #8F0808 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -21px;
+  }
+  .ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #8F0808;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #8F0808;
+  }
+  .ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #8F0808;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #8F0808;
+  }
+
+
+  .wrapper {
+    --color: #1F242D;
+    --color-invert: #ffffff;
+    --clip-path: circle(15px at left);
+    --clip-path-hover: circle(70px at left);
+    --clip-path-clicked: circle(100vw at left);
+    --duration: .5s;
+    --timing-function: ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  .wrapper .video {
+    height: 5vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    -webkit-clip-path: var(--clip-path);
+            clip-path: var(--clip-path);
+    transition: -webkit-clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function), -webkit-clip-path var(--duration) var(--timing-function);
+  }
+  .wrapper .video div {
+    position: fixed;
+    background: #c4cbde;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: cover;
+  }
+  .wrapper .text {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    font-size: 3.7vh;
+    opacity: var(--opacity, 1);
+    transition: opacity 0.3s var(--timing-function) 0.2s;
+  }
+  .wrapper .text::before, .wrapper .text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    right: 25px;
+    height: 0;
+  }
+  .wrapper .text::before {
+    box-shadow: 26px 0 0 1px var(--color);
+    right: var(--r, 100%);
+    opacity: var(--opacity, 0);
+    transition: right 0.5s ease-in, opacity 0.1s linear;
+  }
+  .wrapper .text::after {
+    box-shadow: 26px 0 0 1px var(--color-invert);
+    -webkit-clip-path: var(--clip-path);
+            clip-path: var(--clip-path);
+    transition: -webkit-clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function), -webkit-clip-path var(--duration) var(--timing-function);
+  }
+  .wrapper .text > span::before, .wrapper .text > span::after {
+    content: attr(data-text);
+    padding-left: 26px;
+  }
+  .wrapper .text > span::before {
+    color: var(--color);
+    color: #A3EEE9;
+  }
+  .wrapper .text > span::after {
+    color: var(--color-invert);
+    -webkit-clip-path: var(--clip-path);
+            clip-path: var(--clip-path);
+    transition: -webkit-clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function), -webkit-clip-path var(--duration) var(--timing-function);
+    position: absolute;
+    left: 0;
+  }
+  .wrapper input {
+    width: 220px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 40px;
+    z-index: 2;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    cursor: pointer;
+  }
+  .wrapper input:focus {
+    outline: 0;
+  }
+  .wrapper input:hover ~ .video {
+    -webkit-clip-path: var(--clip-path-hover);
+            clip-path: var(--clip-path-hover);
+  }
+  .wrapper input:hover ~ .text::before {
+    --r: 25px;
+    --opacity: 1;
+  }
+  .wrapper input:hover ~ .text::after {
+    -webkit-clip-path: var(--clip-path-hover);
+            clip-path: var(--clip-path-hover);
+  }
+  .wrapper input:hover ~ .text > span::after {
+    -webkit-clip-path: var(--clip-path-hover);
+            clip-path: var(--clip-path-hover);
+  }
+  .wrapper input:checked {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .wrapper input:checked ~ .video {
+    -webkit-clip-path: var(--clip-path-clicked);
+            clip-path: var(--clip-path-clicked);
+  }
+  .wrapper input:checked ~ .text {
+    --opacity: 0;
+    transition: opacity 0.3s var(--timing-function);
+  }
+  .wrapper input:checked ~ .text::after {
+    -webkit-clip-path: var(--clip-path-clicked);
+            clip-path: var(--clip-path-clicked);
+  }
+  .wrapper input:checked ~ .text > span::after {
+    -webkit-clip-path: var(--clip-path-clicked);
+            clip-path: var(--clip-path-clicked);
+  }
+  
+/*
+
+SEGUNDO BOTON
+*/
+
+  .effect1 {
+    color: #A3EEE9;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 2vh;
+    position: relative;
+    padding: 2px 50px 2px 10px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(3);
+        -ms-transform: scale(3);
+            transform: scale(3); 
+    margin-top: 6vh;
+    font-weight: 600;
+   
+  }
+  
+  .effect1 .bg {
+    background: #A3EEE9;
+    width: 30px;
+    height: 2px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
+    z-index: -1;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  .effect1:hover {
+    color: #0B1321;
+    padding-right: 50px;
+  }
+  
+  .effect1:hover .bg {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    overflow: hidden;
+  }
+  
+  .effect1 .bg:before, .effect1 .bg:after {
+    content: '';
+    height: 2px;
+    width: 10px;
+    background: #A3EEE9;
+    position: absolute;
+    right: -2px;      
+    -webkit-transition: all 0.5s;      
+    -o-transition: all 0.5s;      
+    transition: all 0.5s;
+  }
+  
+  .effect1 .bg:before {
+    bottom: 3px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .effect1 .bg:after{
+    top: 3px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  
+  .effect1:hover .bg:before,
+  .effect1:hover .bg:after{
+    right: 0;
+  }
+  
+  .effect1:hover .bg:before{
+    bottom: 6px;
+  }
+  
+  .effect1:hover .bg:after{
+    top: 6px;
+  }
+/*
+
+SEGUNDO BOTON
+*/
+
+.shadowHeaderHardUno{
+    position: relative;
+    top: 0;
+    height: 20vh;
+    width: 100%;
+    z-index: 30;
+    background: linear-gradient(to bottom, #0B1321, transparent);
+}
+.shadowHeaderHardDos{
+    position: relative;
+    top: 30vh;
+    height: 20vh;
+    width: 100%;
+    z-index: 30;
+    background: linear-gradient(to top, #0B1321, transparent);
+}
+.heroHardwarePage{
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10vh;
+}
+.containerStore{
+    background-color: #0B1321;
+}
+.containerStoreHardwares{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+.cardHardwareIndiv{
+    min-height: 40vh;
+    margin-bottom: 7vh;
+    border-radius: 30px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    width: 90%;
+    background-color: #13233d;
+    display: flex;
+}
+.allInfoProductHardware{
+    padding: 2vh 2vw;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 40vh;
+}
+.imgButtonProductHardware{
+    height: 50vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 2vw;
+}
+.imgProductHardwareCard{
+    height: 90%;
+    width: 90%;
+    background-position: center;
+    background-size: cover;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    border-radius: 30px;
+}
+.priceProductHardware{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2vh;
+    align-items: center;
+}
+.pDescriptionProductHardware{
+    margin: 1vh;
+    color: #8B95A6;
+    font-size: 2vh;
+}
+.titleProductHardware h2{
+    color: white;
+    text-align: center;
+    font-size: 5vh;
+}
+.contenedorFormulario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formularioBasicInformation{
+  width: 60%;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.divPasosFormularios{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pasoActivoInfoFormulario{
+  text-align: center;
+  width: 80%;
+  min-height: 4rem;
+  max-height: 4rem;
+  background-color: #0B1321;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+}
+.pasoNoActivoInfoFormulario{
+  text-align: center;
+  width: 80%;
+  min-height: 4rem;
+  max-height: 4rem;
+  background-color: #8B95A6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 1rem 1rem;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+}
+.contentFormularioInforCard {
+  overflow-y: scroll !important;
+}
+.itemsContenedor{
+  width: 55%;
+}
+.inputFormularioBasicInfo{
+  height: 6vh;  
+  text-align: center;
+}
+.divLabelInputForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.divLabelInputForm label{
+  color: #0B1321;
+}
+.nextBotonFormulario{
+  width: 10vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: #0B1321;
+  color: #fff;
+  height: 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2.5vh;
+}
+.botonHomeFormulario{
+  width: 12rem;
+  margin-top: 2rem;
+  margin-bottom: 3vh;
+  padding: 0 0.5rem;
+  background-color: #0B1321;
+  color: #fff;
+  height: 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2.5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.botonHomeCreditCard{
+  width: 12rem;
+  margin-top: 2rem;
+  margin-bottom: 3vh;
+  padding: 0 0.5rem;
+  background-color: #0B1321;
+  color: #fff;
+  height: 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2.5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nextBotonFormulario:hover{
+  background-color: #1a2d4e;
+}
+.contenedorInfoTarjeta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentFormularioInforCard{
+  width: 80vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 8vh;
+}
+.formularioCreditCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.formularioCreditCard input{
+  height: 6vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+.divPaypal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding-left: 2vw;
+  padding-bottom: 1vh;
+}
+.divFomularioCreditCard{
+  display: flex;
+  max-width: 100%;
+}
+.divPasosDosCreditCard{
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+}
+.formularioYTarjeta{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+.botonPayCreditCard{
+  width: 10vw;
+  height: 5vh;
+  margin-top: 2vh;
+  background-color: #0B1321;
+  color: white;
+  border-radius: 15px;
+}
+.reviewOrder{
+  margin-right: 5rem;
+  font-size: 3vw;
+  text-align: center;
+  color: black;
+}
+
+.formOrderReview{
+  width: 80%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.576);
+  border-radius: 30px;
+}
+.divContentOrderReview{
+  padding: 5rem 0;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnExplore {
+  width: 13vw;
+  height: 8vh;
+  font-size: 4vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+  line-height: 100px;
+  color: rgba(255,255,255,0.9);
+  border-radius: 50px;
+  background: linear-gradient(-45deg, #A3EEE9, #ff3d77, #338aff, #1DD05D);
+  background-size: 600%;
+  -webkit-animation: anime 16s linear infinite;
+  animation: anime 16s linear infinite;
+}
+@-webkit-keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.imgProductHardwareCard{
+  overflow: hidden;
+}
+.divTarjetaSinStock{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.548);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: bold;
+  padding-bottom: 1vh;
+}
+.divTarjetaSinStock p{
+  background-color: red;
+  color: white;
+  padding-right: 2vw;
+  padding-left: 1vh;
+}
+.containSectionFiltersGames{
+  padding: 10vh 0;
+}
+.containInputFilterGames input{
+  color: #0B1321;
+}
+.containInputFilterGames input::placeholder{
+  color: #999;
+  font-weight: 500;
+}
+.containTextFilterGames{
+  text-align: center;
+}
+.containTextFilterGames h2{
+  color: white
+}
+.containTextFilterGames h2 {
+  color: #A3EEE9;
+  font-family: "Kanit";
+  font-size: 6vh;
+  line-height: 1em;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3vh;
+  text-shadow: 0 1px 0 #1a2d4e, 0 2px 0 #1a2d4e, 0 3px 0 #1a2d4e
+}
+.containTextFilterGames h4 {
+  color: #A3EEE9;
+  font-family: "Kanit";
+  font-size: 4vh;
+  line-height: 1em;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 4vh;
+  text-shadow: 0 1px 0 #1a2d4e, 0 2px 0 #1a2d4e, 0 3px 0 #1a2d4e
+}
+.tagsContainer{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+}
+.filtroPorCategoriasGames{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+}
+.tagsFilter{
+  display: flex;
+  align-items: center;
+}
+.tituloFiltroGames{
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 3vh;
+}
+.cadaTextoFiltroGame{
+  color: #A3EEE9;
+  margin: 0 1vw;
+  border: 1px solid #A3EEE9;
+  border-radius: 10px;
+  padding: 0.5vh 0.5vw;
+  cursor: pointer;
+}
+.cadaTextoFiltroGame:hover{
+  background-color: #A3EEE9;
+  color: #0B1321;
+}
+.tercerFormCreditCard{
+  width: 55%;
+  height: 100%;
+  padding: 2vh 1vw;
+}
+.divContenidoBotonesTercerForm{
+  margin-top: -6rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.botonCancelFormulario{
+  width: 10vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: #F70505;
+  color: #fff;
+  height: 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3vw;
+}
+.ladoPasosFormularioTres{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+.tituloFormularioTresPrincipal{
+  width: 100%;
+  text-align: center;
+  font-size: 5vh;
+  color: #0B1321;
+  height: 14vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formOrderReview{
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-top: 10vh;
+}
+.listadoProductosTercerForm{
+  
+  color:#0B1321;
+  display: flex;
+  align-items: baseline;
+}
+.listadoProductosTercerForm p{
+  color: white;
+  margin: 0 1vw;
+
+}
+.listadoProductosTercerForm h3{
+  font-weight: bold;
+}
+
+.totalPriceFormTres{
+  color: #0B1321;
+  margin: 3vh 2vw 3vh 0;
+}
+.divTotalPriceTercerForm{
+  display: flex;
+  justify-content: flex-start ;
+  align-items: center;
+}
+.divTotalPriceTercerForm p{
+  font-size: 4vh;
+}
+.tituloFormTerceroCompraras{
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+.cadaDivInfoCompraTres{
+  color: #0B1321;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.divProductNameYPrice{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+.divProductNameYPrice h3{
+  text-align: start;
+  font-size: 0.7vw;
+  width: 50%;
+}
+.divProductNameYPrice p{
+  max-width: 50%;  
+  font-size: 12px;
+  text-align: center;
+}
+.cadaDivInfoCompraTres p{
+  margin-left: 2vw;
+  color: white;
+}
+.cadaDivInfoCompraTresNombre{
+  margin-top: 1vh;
+}
+.cadaDivInfoCompraTresNombre h3{
+  color:#0B1321;
+  font-weight: 600;
+}
+.cadaDivInfoCompraTresNombre span{
+  color:white
+}
+.emptyListBuys{
+  font-size: 4vw;
+  margin-top: 30vh;
+  color: #A3EEE9;
+}
+.linksEmptyListBuys{
+    color: white;
+    background-color: #1DD05D;
+    padding: 1vh 3vh;
+    margin: 2vh 3vw;
+    border-radius: 10px;
+    font-size: 3vh;
+    -webkit-box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.39); 
+    box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.39);
+    cursor: pointer;
+}
+.divButtonsEmptyListBuys{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedorUltimoFormCredit{
+  height: 80vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.734);
+  border-radius: 30px;
+}
+.divAnimacionesFormCuatro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 33%;
+}
+.divAnimacionesDosFormCuatro{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 33%;
+  border-top: 2px solid black;
+}
+.divVolverFormCuatro{
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 33%;
+  padding-bottom: 2rem;
+  border-top: 2px solid black;
+}
+.botonHomeFormularioCuatro{
+  width: 14rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: #1DD05D;
+  color: white;
+  font-size: 3vh;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.5s
+}
+.botonHomeFormularioCuatro:hover{
+  background-color: #16af4c;
+  transition: 0.5s
+}
+.infoProblemaFormCuatro{
+  padding: 2vh 0;
+  width: 80%;
+  text-align: center;
+  font-size: 3vh;
+  color: #0B1321;
+  font-weight: 500;
+}
+.infoDeliveryFormCuatro{
+  color: #0B1321;
+  font-size: 4vh;
+  font-weight: 600;
+  width: 70%;
+  text-align: center;
+  margin: 4vh 2vw;
+}
+.cadaDivArticulosComprados{
+  border: 4px solid var(--third-bg-color);
+  margin: 2vh 0;
+  width: 80%;
+  border-radius: 27px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.infoPrincipalDeLaCompra{
+  width: 100%;
+  background-color: #0B1321;
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 4vw;
+  border-radius: 20px;
+}
+.infoPrincipalDeLaCompra h1{
+  color: white;
+}
+.tituloInfoDelivery{
+  width: 100%;
+  background-color: #0B1321;
+  color: white;
+  font-size: 3.5vh;
+  margin-top: 5vh;
+  font-weight: 400;
+  padding-left: 2vw;
+}
+.divContenidoInfoDelivery{
+  width: 100%;
+  border-bottom: 1px solid #0B1321;
+  padding-left: 1vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.infoPersonalDisplay{
+  display: flex;
+  align-items: center;
+}
+.infoPersonalDisplay p{
+  margin-left: 1vw;
+}
+.infoProductosDeLaCompra{
+  margin-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tituloProductosComprados{
+  width: 100%;
+  display: flex;
+  justify-content:flex-start;
+  padding-left: 2vw;
+  background-color: #0B1321;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 3vh;
+}
+.divProductosComprados{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.divInfoMyBuys{
+  padding: 2vh 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.containerOrder h2{
+  font-size: 3vw;
+  padding: 3vh 3vw;
+}
+.cadaDivProductoComprado{
+  width: 90%;
+  display: flex;
+  border-radius: 30px;
+  padding: 3vh 2vw;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3vh;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52);
+}
+.priceEnProductosComprados{
+  display: flex;
+  width: 50%;
+}
+.priceEnProductosComprados p{
+    font-size: 4vh;
+    margin: 0 0.5vw;
+}
+.divContainerMyBuysSinCompras{
+  height: 50vh;
+  background-color: white;
+  width: 80%;
+  margin-top: 10vh;
+  border-radius: 30px;
+}
+.divContainerMyBuysSinCompras h1{
+  width: 100%;
+  background-color: #0B1321;
+  color: white;
+  text-align: center;
+}
+.divContainerMyBuysSinCompras div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+}
+.botonIrAGamesBuy{
+  width: 12rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #1DD05D;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.botonIrAHardwareBuy{
+  width: 12rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #1098ad;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.botonIrAHomeBuy{
+  width: 12rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #0B1321;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.divCantidadesEnCarrito{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+div.fileinputs {
+	position: relative;
+  margin-top: 1vh;
+  height: 9%;
+}
+
+div.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+  background-color: #0B1321;
+  border-radius: 10px;
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.fakefile p{
+  color: white
+}
+.file{}
+
+input.file {
+	position: relative;
+	-moz-opacity:0 ;
+	z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+  height: 3rem;
+}
+.iconoSelectImg{
+  color: white;
+  margin-left: 1vw;
+}
